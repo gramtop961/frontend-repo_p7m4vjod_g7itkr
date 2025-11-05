@@ -1,24 +1,24 @@
 import React from 'react';
-import { GraduationCap, Briefcase } from 'lucide-react';
+import { GraduationCap, Briefcase, BookOpen } from 'lucide-react';
 
 const Item = ({ title, org, time, desc }) => (
   <div className="relative pl-6">
     <div className="absolute left-0 top-1.5 h-3 w-3 rounded-full bg-emerald-500" />
-    <h4 className="text-lg font-semibold text-white">{title}</h4>
-    <div className="text-sm text-white/70">{org} • {time}</div>
-    <p className="mt-2 text-sm text-white/80">{desc}</p>
+    <h4 className="text-lg font-semibold text-emerald-900">{title}</h4>
+    <div className="text-sm text-emerald-900/70">{org} • {time}</div>
+    <p className="mt-2 text-sm text-emerald-900/80">{desc}</p>
   </div>
 );
 
 const Column = ({ icon: Icon, title, items }) => (
-  <div className="rounded-xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur">
+  <div className="rounded-2xl border border-emerald-200/60 bg-white/70 p-6 shadow-sm backdrop-blur">
     <div className="mb-4 flex items-center gap-3">
-      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/20 text-emerald-400">
+      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-200/60 text-emerald-700">
         <Icon className="h-5 w-5" />
       </div>
-      <h3 className="text-xl font-semibold text-white">{title}</h3>
+      <h3 className="text-xl font-semibold text-emerald-900">{title}</h3>
     </div>
-    <div className="space-y-6 border-l border-white/10 pl-3">
+    <div className="space-y-6 border-l border-emerald-200/60 pl-3">
       {items.map((it, i) => (
         <Item key={i} {...it} />
       ))}
@@ -60,8 +60,12 @@ const Experience = () => {
   return (
     <section id="experience" className="relative mx-auto max-w-7xl px-6 py-20">
       <div className="mb-12">
-        <h2 className="text-3xl font-bold text-white sm:text-4xl">Education & Work</h2>
-        <p className="mt-2 text-white/70">A quick overview of my background and career journey.</p>
+        <div className="mb-3 inline-flex items-center gap-2 rounded-lg bg-emerald-200/60 px-3 py-1 text-emerald-800">
+          <BookOpen className="h-4 w-4" />
+          <span className="text-sm">Journey</span>
+        </div>
+        <h2 className="text-3xl font-bold text-emerald-950 sm:text-4xl">Education & Work</h2>
+        <p className="mt-2 text-emerald-900/70">A tranquil overview of my background.</p>
       </div>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -70,37 +74,37 @@ const Experience = () => {
       </div>
 
       {/* CV Section */}
-      <div id="cv" className="mt-16 rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-8">
-        <h3 className="text-2xl font-semibold text-white">Curriculum Vitae</h3>
-        <p className="mt-2 text-white/70">
-          Below is a concise snapshot of my CV. Feel free to reach out for a full version or custom version tailored to a role.
+      <div id="cv" className="mt-16 rounded-2xl border border-emerald-200/60 bg-white/70 p-8 shadow-sm">
+        <h3 className="text-2xl font-semibold text-emerald-950">Curriculum Vitae</h3>
+        <p className="mt-2 text-emerald-900/70">
+          Below is a serene snapshot of my CV. Reach out for a full version.
         </p>
         <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
           <div>
-            <h4 className="font-semibold text-white">Profile</h4>
-            <p className="mt-2 text-sm text-white/80">
-              Full‑stack developer with a passion for interaction design, performance, and developer experience. I thrive in cross‑functional teams.
+            <h4 className="font-semibold text-emerald-900">Profile</h4>
+            <p className="mt-2 text-sm text-emerald-900/80">
+              Full‑stack developer with a love for gentle interactions, performance, and accessible design.
             </p>
           </div>
           <div>
-            <h4 className="font-semibold text-white">Core Skills</h4>
-            <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-white/80">
+            <h4 className="font-semibold text-emerald-900">Core Skills</h4>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-emerald-900/80">
               <li>React, TypeScript, Next.js, Vite</li>
               <li>Node.js, FastAPI, REST</li>
-              <li>MongoDB, PostgreSQL, Prisma/Mongoose</li>
-              <li>Testing, CI/CD, Cloud (Vercel, Fly, AWS)</li>
+              <li>MongoDB, PostgreSQL</li>
+              <li>Testing, CI/CD, Cloud</li>
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-white">Recent Experience</h4>
-            <ul className="mt-2 space-y-2 text-sm text-white/80">
+            <h4 className="font-semibold text-emerald-900">Recent Experience</h4>
+            <ul className="mt-2 space-y-2 text-sm text-emerald-900/80">
               <li>Frontend Engineer @ Acme — Design systems, performance, accessibility</li>
-              <li>Full‑stack Dev @ Startup Studio — MVPs, product discovery, rapid delivery</li>
+              <li>Full‑stack Dev @ Startup Studio — MVPs, discovery, delivery</li>
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-white">Education</h4>
-            <ul className="mt-2 space-y-2 text-sm text-white/80">
+            <h4 className="font-semibold text-emerald-900">Education</h4>
+            <ul className="mt-2 space-y-2 text-sm text-emerald-900/80">
               <li>B.Sc. Computer Science — Tech University</li>
               <li>Frontend Nanodegree — Udacity</li>
             </ul>
